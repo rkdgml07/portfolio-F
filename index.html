@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>이강희 포트폴리오</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/index.css">
+    <script src="js/jquery-3.7.1.js"></script>
+    <!-- <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500&display=swap" rel="stylesheet">  -->
+    <!-- 슬릭 -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script>
+      $(document).ready(function(){  
+          $('.pfAni').slick({
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          autoplay: false,
+          autoplaySpeed: 3000,
+          dots: true,
+          infinite: true,
+          speed: 1000,
+          cssEase: 'linear',
+          });
+      });
+      $(document).ready(function(){  
+          $('.reani').slick({
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          autoplay: false,
+          autoplaySpeed: 3000,
+          dots: true,
+          infinite: true,
+          speed: 1000,
+          cssEase: 'linear'
+          });
+          var c=[
+                $("#aboutme").offset().top,
+                $("#skills").offset().top,
+                $("#portfolio").offset().top,
+                $("#renewal").offset().top,
+                $("#graphic").offset().top,
+                $("#contact").offset().top
+            ];
+          console.log(c[0]);
+          var n;
+          $("section#cover header div.wrap nav ul li").click(function(){
+              n = $(this).index();
+              $("html,body").animate({scrollTop:c[n]},1000);
+              return false; 
+          });
+      });
+      // 그래픽 디자인 자세히 보기
+    // $(document).ready(function(){
+    //   $("section#graphic div.wrap ul li:nth-child(1) div.wrapText a").click(function(){
+    //       // wpopup 요소 생성 및 닫기 버튼 추가
+    //       var imgSrc = 'img/banana.jpg';
+    //       $("section#graphic div.wrap div.content").append('<div class="wpopup"><img src="' + imgSrc + '"><button class="close">닫기</button></div>');
+    //     //   $("body").addClass("noscroll");
+
+    //       // 클릭 이벤트의 기본 동작 막기
+    //       return false;
+    //   });
+
+    //   // 닫기 버튼에 대한 클릭 이벤트는 이벤트 위임을 사용하여 처리
+    //   $("section#graphic div.wrap div.content").on('click', '.wpopup button.close', function(){
+    //       // wpopup 요소 제거
+    //       $(".wpopup").remove();
+    //       //$("body").removeClass("noscroll");
+    //   });
+    //   //그래픽 디자인 2
+    //   $("section#graphic div.wrap ul li:nth-child(2) div.wrapText a").click(function(){
+    //       // wpopup 요소 생성 및 닫기 버튼 추가
+    //       var imgSrc = 'img/im2.jpg';
+    //       $("section#graphic div.wrap div.content").append('<div class="wpopup"><img src="' + imgSrc + '"><button class="close">닫기</button></div>');
+    //       //$("body").addClass("noscroll");
+
+    //       // 클릭 이벤트의 기본 동작 막기
+    //       return false;
+    //   });
+
+    //   // 닫기 버튼에 대한 클릭 이벤트는 이벤트 위임을 사용하여 처리
+    //   $("section#graphic div.wrap div.content").on('click', '.wpopup button.close', function(){
+    //       // wpopup 요소 제거
+    //       $(".wpopup").remove();
+    //       //$("body").removeClass("noscroll");
+    //   });
+    //   //그래픽 디자인 3
+    //   $("section#graphic div.wrap ul li:nth-child(3) div.wrapText a").click(function(){
+    //       // wpopup 요소 생성 및 닫기 버튼 추가
+    //       var imgSrc = 'img/igd.png';
+    //       $("section#graphic div.wrap div.content").append(
+    //         '<div class="wpopup"><img src="' + imgSrc + '"><button class="close">닫기</button></div>');
+    //       //$("body").addClass("noscroll");
+
+    //       // 클릭 이벤트의 기본 동작 막기
+    //       return false;
+    //   });
+
+    //   // 닫기 버튼에 대한 클릭 이벤트는 이벤트 위임을 사용하여 처리
+    //   $("section#graphic div.wrap div.content").on('click', '.wpopup button.close', function(){
+    //       // wpopup 요소 제거
+    //       $(".wpopup").remove();
+    //       //$("body").removeClass("noscroll");
+    //   });
+    //   //그래픽 디자인 4
+    //   $("section#graphic div.wrap ul li:nth-child(4) div.wrapText a").click(function(){
+    //       // wpopup 요소 생성 및 닫기 버튼 추가
+    //       var imgSrc = 'img/im4.jpg';
+    //       $("section#graphic div.wrap div.content").append('<div class="wpopup"><img src="' + imgSrc + '"><button class="close">닫기</button></div>');
+    //       //$("body").addClass("noscroll");
+
+    //       // 클릭 이벤트의 기본 동작 막기
+    //       return false;
+    //   });
+
+    //   // 닫기 버튼에 대한 클릭 이벤트는 이벤트 위임을 사용하여 처리
+    //   $("section#graphic div.wrap div.content").on('click', '.wpopup button.close', function(){
+    //       // wpopup 요소 제거
+    //       $(".wpopup").remove();
+    //       //$("body").removeClass("noscroll");
+    //   });
+    //   //그래픽 디자인 5
+    //   $("section#graphic div.wrap ul li:nth-child(5) div.wrapText a").click(function(){
+    //       // wpopup 요소 생성 및 닫기 버튼 추가
+    //       var imgSrc = 'img/im5.jpg';
+    //       $("section#graphic div.wrap div.content").append('<div class="wpopup"><img src="' + imgSrc + '"><button class="close">닫기</button></div>');
+    //       //$("body").addClass("noscroll");
+
+    //       // 클릭 이벤트의 기본 동작 막기
+    //       return false;
+    //   });
+
+    //   // 닫기 버튼에 대한 클릭 이벤트는 이벤트 위임을 사용하여 처리
+    //   $("section#graphic div.wrap div.content").on('click', '.wpopup button.close', function(){
+    //       // wpopup 요소 제거
+    //       $(".wpopup").remove();
+    //       $("body").removeClass("noscroll");
+    //   });
+    //   // section#portfolio 내의 figure 요소의 두 번째 img 요소를 선택하여 스타일 적용
+    //   $('section#portfolio div.wrap div figure img:nth-of-type(2)').css({
+    //       'background-image':'url(../img/p2p.png)'
+    //   });
+    // });
+    </script>
+    <!-- AOS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        $(document).ready(function(){
+            AOS.init();
+        });
+    </script>
+    
+    
+</head>
+
+<body>
+    <!-- 상단영역 -->
+    <section id="cover" class="time">
+        <header>
+            <div class="wrap">
+                <nav class="flex">
+                    <h1><a href="">Lee kang Hee's <span>Portfolio</span></a></h1>
+                    <ul class="flex">
+                        <li><a href="" class="block">About me</a></li>
+                        <li><a href="" class="block">Skills</a></li>
+                        <li><a href="" class="block">Portfolio</a></li>
+                        <li><a href="" class="block">Renewal Design</a></li>
+                        <li><a href="" class="block">Graphic Design</a></li>
+                        <li><a href="" class="block">contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <!-- 타이틀 영역 -->
+        <div class="text">
+            <div class="img">
+                <div class="left">
+                    <h1>Web Designer</h1>
+                    <p>Web Desiner</p>
+                    <p>Ux/Ui Desiner</p>
+                    <p>Web Publisher</p>
+                </div>
+                <div class="right">
+                    <p>A Journey Of A Thousand Miles <br>
+                        Begins With A Single Step.</p>
+                    <h1>Portfolio</h1>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- 어바웃 -->
+    <section id="aboutme">
+        <div class="wrap grid">
+            <div class="text">
+                <h2 class="h2" data-aos="fade-up" data-aos-duration="2000">About me</h2>
+                <p data-aos="fade-up" data-aos-duration="2000">안녕하세요! 예비 웹디자이너 이강희입니다.</p>
+            </div>
+            <div class="img" data-aos="fade-left" data-aos-duration="3000">
+                <p>2000,07,07</p>
+                    <figure>
+                        <img src="img/about.jpg" alt="강희">
+                    </figure>
+                    <div class="line">
+                     <div class="box">
+                      <div class="con">
+                        <ul class="na">
+                            <li><strong>이름:</strong> 이강희</li>
+                            <li><strong>나이:</strong> 25</li>
+                            <li><strong>학력:</strong> 원광대학교 유아교육과</li>
+                            <li><strong>수료내역:</strong> 이젠 아카데미 ux/ui 웹디자이너<br>웹퍼블리셔 과정 수료</li>
+                            <li><strong>자격증:</strong> GTQ 1급, GTQI 1급<br> 웹디자인 기능사 필기</li>
+                        </ul>
+                        <ul class="tag">
+                            <li>#열정있는 신입</li>
+                            <li>#시간엄수</li>
+                            <li>#책임감</li>
+                            <li>#웹디자인</li>
+                            <li>#ux/ui 디자인</li>
+                            <li>웹퍼블리셔</li>
+                        </ul>
+                      </div>
+                     </div>
+                    </div>
+            </div>
+        </div>
+    </section>
+    <!-- 스킬 -->
+    <section id="skills">
+        <div class="wrap">
+            <div class="text">
+                <h2 class="h2" data-aos="fade-up" data-aos-duration="2000">Skills</h2>
+                <p data-aos="fade-up" data-aos-duration="2000">과정을 진행하며 습득한 디자인 툴과 코딩툴입니다!</p>
+            </div>
+            <div class="flex con">
+                <ul class="design" data-aos="fade-right" data-aos-duration="3000">
+                    <h3>Design tools</h3>
+                    <ul>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                    </ul>
+                </ul>
+                <ul class="coding" data-aos="fade-left" data-aos-duration="3000">
+                    <h3>Coding tools</h3>
+                    <ul>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                    </ul>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <!-- 포트폴리오 -->
+    <section id="portfolio">
+        <div class="wrap paddingT50 paddingB50">
+            <div class="text">
+                <h2 class="h2" data-aos="fade-up" data-aos-duration="2000">Portfolio</h2>
+                <p data-aos="fade-up" data-aos-duration="2000">퍼블리싱 기술을 활용한 클론 코딩작품입니다. </p>
+            </div>
+            <div class="pfAni" data-aos="zoom-in" data-aos-duration="3000">
+                <div class="grid">
+                    <h3>하이트 진로</h3>
+                    <figure><img src="img/p2.png" alt="하이트 진로"><img src="img/p2p.png" alt=""></figure>
+                    <ul class="con">
+                        <li>하이트 진로 홈페이지를 클론코딩으로 만들어보았습니다.</li>
+                        <li><strong>사용툴:</strong> HTML, CSS, JavaScript, jQuery</li>
+                        <li><strong>참여도:</strong> 100%</li>
+                        <li><a href="" class="block">사이트 바로가기</a></li>
+                    </ul>
+                </div>
+                <div class="grid">
+                    <h3>알툴즈</h3>
+                    <figure><img src="img/p3.png" alt="알툴즈"><img src="img/p3p.png" alt=""><img src="img/p3t.png" alt=""></figure>
+                    <ul class="con">
+                        <li>알툴즈 홈페이지를 기존 사이트에서<br>반응형이 될 수 있도록 클론코딩으로 만들어보았습니다.</li>
+                        <li><strong>사용툴:</strong> HTML, CSS, JavaScript, jQuery</li>
+                        <li><strong>참여도:</strong> 100%</li>
+                        <li><a href="" class="block">사이트 바로가기</a></li>
+                    </ul>
+                </div>
+                <div class="grid">
+                    <h3>교직원 공제회 홈페이지</h3>
+                    <figure><img src="img/p1.png" alt="교직원 공제회 홈페이지"></figure>
+                    <ul class="con">
+                        <li>교직원 공제회 홈페이지를 클론코딩으로 만들어보았습니다.</li>
+                        <li><strong>사용툴:</strong> HTML, CSS, JavaScript, jQuery</li>
+                        <li><strong>참여도:</strong> 100%</li>
+                        <li><a href="" class="block">사이트 바로가기</a></li>
+                    </ul>
+                </div>
+                <div class="grid">
+                    <h3>스타필드</h3>
+                    <figure><img src="img/p4.png" alt="교직원 공제회 홈페이지"></figure>
+                    <ul class="con">
+                        <li>스타필드를 클론코딩으로 만들어보았습니다.</li>
+                        <li><strong>사용툴:</strong> HTML, CSS, JavaScript, jQuery</li>
+                        <li><strong>참여도:</strong> 100%</li>
+                        <li><a href="" class="block">사이트 바로가기</a></li>
+                    </ul>
+                </div>
+                <div class="grid">
+                    <h3>CU</h3>
+                    <figure><img src="img/p5.png" alt="교직원 공제회 홈페이지"><img src="img/p5p.png" alt=""></figure>
+                    <ul class="con">
+                        <li>CU 홈페이지를 기존 사이트에서<br> 반응형이 될 수 있도록 클론코딩으로 만들어보았습니다.</li>
+                        <li><strong>사용툴:</strong> HTML, CSS, JavaScript, jQuery</li>
+                        <li><strong>참여도:</strong> 100%</li>
+                        <li><a href="" class="block">사이트 바로가기</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- 리뉴얼 -->
+    <section id="renewal">
+        <div class="wrap paddingT50 paddingB50">
+            <div class="text">
+            <h2 class="h2" data-aos="fade-up" data-aos-duration="2000">Renewal Design</h2>
+            <p data-aos="fade-up" data-aos-duration="2000">기존의 홈페이지를 사용자 편의에 맞게 디자인하였습니다.</p>
+            </div>
+            <div class="reani" data-aos="flip-left" data-aos-duration="2000">
+                <div class="con">
+                    <div class="flex img">
+                        <figure><img src="img/renewal1.PNG" alt=""></figure>
+                    </div>
+                    <ul class="flex">
+                        <h3>하이트 진로</h3>
+                        <li>하이트 진로 홈페이지를 사용자의 편의에 맞게<br> 
+                            리뉴얼 디자인을 했습니다.</li>
+                        <li><strong>사용툴:</strong> 포토샵, 파워포인트</li>
+                        <li><strong>참여도:</strong> 100%</li>
+                        <li><a href="" class="block">작품보기</a></li>
+                    </ul>
+                </div>
+                <div class="con">
+                    <div class="flex img">
+                    <figure><img src="img/renewal2.PNG" alt=""></figure>
+                    </div>
+                    <ul class="flex">
+                        <h3>이디야</h3>
+                        <li>하이트 진로 홈페이지를 분석해 리뉴얼해보았습니다.</li>
+                        <li><strong>사용툴:</strong> 포토샵, 파워포인트</li>
+                        <li><strong>참여도:</strong> 100%</li>
+                        <li><a href="" class="block">작품보기</a></li>
+                    </ul>
+                </div>
+                <div class="con">
+                    <div class="flex img">
+                    <figure><img src="img/re.PNG" alt=""></figure>
+                    </div>
+                    <ul class="flex">
+                        <h3>하이트 진로</h3>
+                        <li>하이트 진로 홈페이지를 분석해 리뉴얼해보았습니다.</li>
+                        <li><strong>사용툴:</strong> 포토샵, 파워포인트</li>
+                        <li><strong>참여도:</strong> 100%</li>
+                        <li><a href="" class="block">작품보기</a></li>
+                    </ul>
+                </div>
+          </div>
+        </div>
+    </section>
+    <!-- 그래픽 -->
+    <section id="graphic">
+        <div class="wrap">
+          <div class="text">
+            <h2 class="h2" data-aos="fade-up" data-aos-duration="2000">Graphic Design</h2>
+            <p data-aos="fade-up" data-aos-duration="2000">포토샵과 일러스트레이터로 작업한 그래픽 디자인입니다.</p>
+          </div>
+          <div class="wrap content">
+            <ul class="grid">
+                <li>
+                    <figure></figure>
+                    <div class="wrapText">
+                        <p>포스터 디자인</p>
+                        <a href="https://github.com/rkdgml07/portfolio-F/blob/main/assetsimages/%EB%B0%94%EB%82%98%EB%82%98%20%EC%9A%B0%EC%9C%A0%20%ED%8F%AC%EC%8A%A4%ED%84%B0%20%EB%94%94%EC%9E%90%EC%9D%B8.jpg?raw=true" target="_blank" class="block">자세히 보기</a>
+                    </div>
+                </li>
+                <li>
+                    <figure></figure>
+                    <div class="wrapText">
+                        <p>상세페이지 디자인</p>
+                        <a href="https://github.com/rkdgml07/portfolio-F/blob/main/assetsimages/%EC%88%98%EB%B0%95%20%EC%83%81%EC%84%B8%ED%8E%98%EC%9D%B4%EC%A7%80-1.jpg?raw=true"  target="_blank" class="block">자세히 보기</a>
+                    </div>
+                </li>
+                <li>
+                    <figure></figure>
+                    <div class="wrapText">
+                        <p>그래픽 디자인</p>
+                        <a href="https://github.com/rkdgml07/portfolio-F/blob/main/assetsimages/igd.jpg?raw=true" target="_blank" class="block">자세히 보기</a>
+                    </div>
+                </li>
+                <li>
+                    <figure></figure>
+                    <div class="wrapText">
+                        <p>디자인</p>
+                        <a href="" class="block">자세히 보기</a>
+                    </div>
+                </li>
+                <li>
+                    <figure></figure>
+                    <div class="wrapText">
+                        <p>디자인</p>
+                        <a href="" class="block">자세히 보기</a>
+                    </div>
+                </li>
+            </ul>
+          </div>
+        </div>
+        
+    </section>
+    <!-- 컨택 -->
+    <section id="contact">
+        <div class="wrap paddingT50 paddingB50">
+            <h2 class="h2" data-aos="fade-up" data-aos-duration="2000">contact</h2>
+            <div class="flex" data-aos="fade-left" data-aos-duration="2000">
+                <ul class="flex">
+                    <p>"하루하루 성장하는 웹디자이너가 되겠습니다."</p>
+                    <li><strong>연락처:</strong> 010-8003-4742</li>
+                    <li><strong>이메일:</strong> dlrksgml0707@naver.com</li>
+                    <li><strong>카톡 ID:</strong>kanghee0707</li>
+                </ul>
+                <figure><img src="https://placehold.co/400x600" alt=""></figure>
+            </div>
+        </div>
+    </section>
+    <!--  -->
+    <section id="rights">
+        <div class="wrap">
+            <ul class="flex">
+                <li>본 페이지는 상업적 목적이 아닌 개인 포트폴리오용으로 제작되었습니다.</li>
+                <li>© 2024 Lee kang hee. All Rights Reserved.</li>
+            </ul>
+        </div>
+    </section>
+
+
+
+
+
+</body>
+</html>
