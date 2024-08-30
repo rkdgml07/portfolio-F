@@ -62,6 +62,7 @@ section#cover header div.wrap nav ul {
   justify-content: right;
 }
 section#cover header div.wrap nav ul li {
+
   
   font-size: 23px;
 }
@@ -877,7 +878,7 @@ section#graphic div.wrap ul li:nth-child(3) {
 section#graphic div.wrap ul li:nth-child(4) {
   grid-column: 1;
   grid-row: 2;
-  background-image: url(../img/im4.jpg);
+  background-image: url(../img/ist.png);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
