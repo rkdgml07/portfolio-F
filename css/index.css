@@ -1023,7 +1023,7 @@ section#contact div.wrap div figure {
   z-index: 1;
 }
 section#contact div.wrap div figure img {
-  
+  width: 450px;
 } 
 /* rights */
 section#rights {
